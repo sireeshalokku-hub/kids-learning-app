@@ -1,0 +1,156 @@
+{
+  "kind": "build_request",
+  "title": "Add Telugu and English language learning games with General Knowledge content",
+  "projectName": "Kids Learning Hub",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "text": "Create a Telugu language learning game where kids match Telugu words to pictures or English translations, using a word-image matching interface similar to the existing Language Arts game",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Telugu words are displayed in Telugu script",
+        "Kids can match Telugu words to corresponding images or English words",
+        "Score and level progression work similar to existing language games",
+        "Progress is saved to the backend under a new Telugu subject category"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create an English language learning game with vocabulary building exercises where kids match English words to pictures or definitions, expanding beyond the existing Language Arts content",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "English vocabulary words are displayed with clear pronunciation-friendly text",
+        "Kids can match English words to images or simple definitions",
+        "Game includes basic vocabulary appropriate for elementary school children",
+        "Progress is tracked and saved separately from Language Arts"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create a General Knowledge (GK) game with quiz-style questions covering topics like animals, geography, basic science facts, and common knowledge appropriate for elementary school children",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Multiple choice questions with 3-4 answer options",
+        "Questions cover diverse GK topics suitable for kids",
+        "Visual feedback for correct and incorrect answers",
+        "Score and level progression system",
+        "Progress is saved to the backend under GK category"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Update the home screen to include navigation cards for Telugu, English, and General Knowledge (GK) games alongside the existing Math, Science, Language Arts, and Social Studies cards",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three new subject cards are added to the home page grid",
+        "Each card has a distinct, colorful icon matching the playful design theme",
+        "Cards navigate to their respective game pages when clicked",
+        "Layout remains responsive and kid-friendly with consistent spacing"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Extend the backend to track progress for Telugu, English, and GK subjects, adding new fields for scores and levels for these three categories in the user progress structure",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend UserProgress type includes teluguScore, teluguLevel, englishScore, englishLevel, gkScore, and gkLevel fields",
+        "Update and retrieval functions handle the new subject data",
+        "Existing progress data is preserved during upgrade"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create achievements for Telugu, English, and GK games that unlock based on score milestones and level progression, similar to existing achievements for Math, Science, and Language Arts",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "kids was learning by games in telugu english maths gk science in all develop a app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 2-3 achievements per new subject (Telugu, English, GK)",
+        "Achievements display on the Achievements page",
+        "Progress bars and unlock animations work as expected",
+        "Achievement logic is integrated into useAchievements hook"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Render generated subject icons for Telugu, English, and General Knowledge as static assets in frontend/public/assets/generated and use them in the home screen cards",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated image files are placed in frontend/public/assets/generated",
+        "Home screen cards reference these images correctly",
+        "Images are displayed with appropriate sizing and styling"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts or other immutable paths",
+    "Maintain single-actor backend architecture in backend/main.mo",
+    "Use existing game patterns and styling conventions for consistency"
+  ],
+  "nonGoals": [
+    "Adding multilingual UI translations for the entire app",
+    "Creating games for subjects beyond Telugu, English, and GK",
+    "Implementing text-to-speech or audio pronunciation features",
+    "Adding multiplayer or competitive features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Colorful Telugu script book icon illustration with vibrant colors (telugu-icon.dim_128x128.png)",
+      "Friendly English alphabet ABC blocks icon illustration with playful style (english-icon.dim_128x128.png)",
+      "Bright lightbulb or brain icon illustration representing general knowledge (gk-icon.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}
