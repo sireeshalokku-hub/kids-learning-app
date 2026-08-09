@@ -1,0 +1,260 @@
+PERSONAL PORTFOLIO WEBSITE
+                                                                    PROJECT REPORT-1(1)
+ 
+NAME:LOKKU SIREESHA
+COLLEGE: NBKR Institute of science and technology
+COURSE:  B tech(Computer science and Engneering)
+YEAR:2024-2028
+
+ 1. Project Introduction
+
+The Personal Portfolio Website is a web-based project developed to showcase my personal information, education, technical skills, projects, achievements, and contact details. The main goal is to create a simple, attractive, and professional online profile.
+
+ 2. Problem Description
+
+It can be difficult to present personal skills, projects, and achievements in one place. This project solves the problem by providing a single website where all important professional information can be easily viewed.
+
+3. Requirements
+
+The website requires a computer or laptop, a code editor such as Visual Studio Code, and a modern web browser. The main website requirements include Home, About, Skills, Education, Projects, and Contact sections.
+
+ 4. Technologies Used
+
+The website is developed using **HTML, CSS, and JavaScript**. HTML creates the structure, CSS provides styling and layout, and JavaScript adds interactive functionality.
+
+5. Architecture
+
+The website follows a simple front-end structure. The main flow is:
+
+**Header → Home → About → Education → Skills → Projects → Contact → Footer**
+
+Users can navigate between different sections using the navigation menu.
+
+
+
+
+
+
+ 6. Database Design
+
+This portfolio is mainly a static website, so a database is not required. Personal information and project details are stored directly in the website files. A database can be added in the future for storing contact form submissions.
+
+ 7. UI/UX Design
+
+The website uses a simple and user-friendly design. Proper spacing, readable fonts, images, navigation links, buttons, and responsive layouts are used to provide a better user experience.
+
+ 8. Development Process
+
+First, the website structure was planned. Then HTML was used to create the content, CSS was used for styling, and JavaScript was used for interactive features. Finally, the website was tested and improved.
+
+ 9. Features
+
+The main features include:
+
+* Home section
+* About Me
+* Education
+* Technical Skills
+* Projects
+* Achievements
+* Contact section
+* Navigation menu
+* Images
+* Responsive design
+
+10. Testing
+
+The website was tested for navigation, layout, images, buttons, links, and responsiveness. It was also checked on different screen sizes and web browsers to identify and fix errors.
+
+ 11. Challenges Faced
+
+During development, some challenges were faced with image positioning, navigation spacing, text alignment, background images, responsive layout, and CSS styling.
+
+
+
+ 12. Solutions
+
+The problems were solved by using CSS properties such as **Flexbox, margin, padding, gap, position, and media queries**. Regular testing and debugging were also performed to improve the website.
+
+ 13. Future Enhancements
+
+In the future, the website can be improved by adding a **dark mode, animations, backend contact form, database, blog section, resume download, social media links, and additional projects**.
+
+ 14. Conclusion
+
+The Personal Portfolio Website helped me gain practical knowledge of HTML, CSS, and JavaScript. It also improved my understanding of web design, responsive layouts, UI/UX, debugging, and website development.
+
+15.Source code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>personal portfolio website</title>
+</head>
+<style>
+
+	body{
+		background-color:#333; 
+	}
+	h1:first-letter{
+       color:blue;
+       font-variant: small-caps;
+	}
+	nav {
+		display: flex;
+		gap:5px;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0px;
+		color:white;
+{
+
+}
+	}
+	nav a{
+		text-decoration:none;
+		color:white;
+		margin:0px;
+		padding:5px;
+	}
+	nav h1:first-letter{
+		color:blue;
+	}
+	nav button{
+		color:white;
+		background-color:green;
+		padding:10px;
+		border: 1px solid lightgreen;
+		border-radius:10%;
+	}
+	h2{
+		margin-left: 100px;
+	}
+     div{
+		margin-left: 70px;
+		color: white;
+	}
+	p{
+		margin-left: 70px;
+		color: white;
+	}
+	button{
+		margin-left:70px;
+		color: white;
+	}
+     div button{
+     	margin-left:60px;
+     	border: 2px groove green;
+     	color:blue;
+     	padding:10px;
+     }
+    p  button{
+     	color:rgb(0,225,200);
+     	background-color:hotpink;
+     	border-radius: 10%;
+     	padding:10px;
+     }
+     div{
+     	color: gray;
+     	font-size:20px;
+     }
+     body{
+     	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQCkMesqOujuzkbRUW4QlzfB-KYncM9Giy7dfliww3og&s=10");
+     	background-size:cover;
+     	background-repeat: no-repeat;
+     	background-position:center;
+     	
+     	height:130vh;
+     }
+     img{
+     	height: 10px;
+     	width:10px;
+     }
+        footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    background-color: transparent;
+    width: 100%;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    color: green;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+</style>
+
+<body>
+	<header>
+	<nav>
+	<h1>Lokku</h1>
+	
+		<a href="#"Home>HOME</a>
+		<a href="#"About>ABOUT</a>
+		<a href="#"portfolio>PORTFOLIO</a>
+		<a href="#"Blog>BLOG</a>
+		<a href="#"Contact>CONTACT</a>
+
+	<button class="button">Let's Talk</button>
+</nav>
+</header>
+            
+    <br> <br> <br>  <br>  <br>  <br> <br> <br>   <br> <br> <br> 
+    <h2>
+             	Hi, I'm
+            	<span style="color:green">Lokku</span>
+            	<span style="color:green">Subramanyam</span>
+            </h2>
+      
+      
+  <div>  I am a Html Css Javascript learner</div> 
+         <p>I am a dedicated Web Development learner who is passionate about <br>
+            creating responsive and interactive websites. I am continuously <br>
+            improving my skills in HTML, CSS, JavaScript, and modern web <br>
+            technologies through hands-on projects and practice.</p>
+      <p>
+        <button>Hire Me</button>
+    </p>
+        <div>
+        <button>See Projects</button>
+    </div>
+      <footer>
+      	<a href="#">
+      	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQey4tqzPx5daSCy7ye5HPTm81xNiMVHI-FnxxFup32A&s=10">
+      </a>
+      <a href="#">
+      	  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS73nXnWE6q7VWZFwJuWH0f2tCrnxeX5a1m1NYrdAJfA&s=10">
+      	</a>
+      	<a href="#">
+      	  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3BNAvaBZ_ENOY90wF5GRt0JqMu45tqezjtQWp-fSIqw&s=10">
+      	</a>
+      </footer>
+</body>
+</html>
+
+16. Project Screenshots
+This section presents screenshots of the important pages developed in the project. These may include the Home Page, About Page, Property Listings, Property Details, Search Page, Login Page, and Contact Page. Screenshots demonstrate the actual working interface of the project.
+
+17. GitHub Repository
+The complete project can be uploaded to a GitHub repository. The repository contains the source code and project files in an organized manner. The GitHub link can be included in the presentation or project report so that others can view the project.
+
+
+
