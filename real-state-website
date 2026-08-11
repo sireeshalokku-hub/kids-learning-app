@@ -1,0 +1,594 @@
+REAL ESTATE LISTING PLATFORM
+ PROJECT REPORT -2
+NAME :LOKKU SIREESHA
+COLLEGE: NBKR Institute Of Science and Technology
+COURSE:B.TECH-CSE
+YEAR:2024-2028
+1. PROJECT INTRODUCTION
+The Real Estate Listing Platform is a web-based application designed to make property searching easier and faster.
+Users can view different properties, check their prices and locations, and get detailed information before making
+a decision. The platform can support buying, renting, and listing properties.
+2. PROBLEM DESCRIPTION
+Traditional property searching can be time-consuming because users need to visit different locations or contact
+multiple agents. It can also be difficult to compare property prices, locations, and facilities. Our platform solves
+these problems by providing property information in one centralized website.
+3. REQUIREMENTS
+The project requires a computer or laptop, a web browser, and a code editor for development. HTML, CSS, and
+JavaScript are required for creating the website. A database and backend can also be used to store and manage
+users, properties, and enquiries.
+4. TECHNOLOGIES USED
+HTML is used to create the structure of the website. CSS is used for styling, layout, colors, and responsive design.
+JavaScript is used to add interactive features such as search, filters, buttons, and form validation. Database and
+backend technologies can be added for storing and processing information.
+5. ARCHITECTURE
+The platform follows a structured architecture consisting of the frontend, backend, and database. The frontend
+provides the interface through which users interact with the website. The backend processes user requests and
+communicates with the database to manage property and user information.
+6. DATABASE DESIGN
+The database is designed to store and organize important information. It can contain tables for users, properties,
+property categories, locations, and enquiries. Each property can have details such as property name, price,
+location, type, size, images, and description.
+7. UI/UX DESIGN
+The website is designed with a simple and user-friendly interface. Property cards, images, navigation menus,
+buttons, search bars, and forms are arranged clearly. Responsive design helps the website work properly on
+computers, tablets, and mobile devices.
+8. DEVELOPMENT PROCESS
+First, we identified the requirements and planned the website structure. Next, we designed the pages and created
+the layout using HTML and CSS. JavaScript was then added for interactive features. Finally, we tested the website
+and corrected errors.
+9. FEATURES
+The main features include property listings, property search, property categories, property details, buying and
+renting options, user registration and login, favorites, property listing, and contact or enquiry forms. These
+features make property searching more convenient.
+10. TESTING
+Testing is performed to make sure that all parts of the website work correctly. We test navigation links, buttons,
+forms, search functionality, images, and responsive layouts. Errors found during testing are corrected before the
+final project is presented.
+11. CHALLENGES FACED
+During development, we faced challenges such as creating a proper page layout, maintaining consistent spacing,
+designing responsive pages, handling forms, and organizing property information. Understanding how different
+technologies work together was also a challenge.
+12. SOLUTIONS
+We solved these challenges by using proper HTML structure and CSS layout techniques such as Flexbox and
+Grid. JavaScript was used for interactive functionality and validation. We also tested each section separately and
+corrected errors during development.
+13. Future Enhancements
+In the future, the platform can be improved by adding advanced property filters, Google Maps integration,
+property recommendations, user reviews, notifications, online booking, and secure payment options. An admin
+dashboard can also be added to manage users and property listings.
+14. CONCLUSION
+The Real Estate Listing Platform provides a convenient way to search, view, buy, rent, and list properties online.
+The project demonstrates our knowledge of web development, UI/UX design, and database concepts. It also
+provides practical experience in developing a real-world web application.
+15. SOURCE CODE
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+ <meta charset=”UTF-8”>
+ <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+ <title>Real Estate Listing Platform</title>
+ <style>
+• {
+Margin: 0;
+ Padding: 0;
+ Box-sizing: border-box;
+ Font-family: Arial, sans-serif;
+ }
+ Body {
+ Background-color: #f5f5f5;
+ Color: #333;
+ }
+ /* Header */
+ Header {
+ Background-color: #222;
+ Color: white;
+ Padding: 18px 7%;
+ Display: flex;
+ Justify-content: space-between;
+ Align-items: center;
+ }
+ Header h1 {
+ Font-size: 26px;
+ }
+ Nav a {
+ Color: white;
+ Text-decoration: none;
+ Margin-left: 25px;
+ Font-size: 16px;
+ }
+ Nav a:hover {
+ Color: #00bcd4;
+ }
+ /* Hero Section */
+ .hero {
+ Min-height: 450px;
+ Background-image:
+ Linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+ url(https://images.unsplash.com/photo-1564013799919-ab600027ffc6);
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: white;
+ padding: 30px;
+ }
+ .hero h2 {
+ Font-size: 45px;
+ Margin-bottom: 15px;
+ }
+ .hero p {
+ Font-size: 19px;
+ Margin-bottom: 25px;
+ }
+ .search-box {
+ Background: white;
+ Padding: 15px;
+ Border-radius: 8px;
+ Display: flex;
+ Gap: 10px;
+ Max-width: 700px;
+ Margin: auto;
+ }
+ .search-box input,
+ .search-box select {
+ Padding: 12px;
+ Border: 1px solid #ccc;
+ Flex: 1;
+ Outline: none;
+ }
+ .search-box button {
+ Padding: 12px 20px;
+ Border: none;
+ Background-color: #00a8b5;
+ Color: white;
+ Cursor: pointer;
+ }
+ .search-box button:hover {
+ Background-color: #00838f;
+ }
+ /* Common Section */
+ Section {
+ Padding: 60px 7%;
+ }
+ .section-title {
+ Text-align: center;
+ Margin-bottom: 35px;
+ }
+ .section-title h2 {
+ Font-size: 32px;
+ Margin-bottom: 10px;
+ }
+ /* Properties */
+ .property-container {
+ Display: grid;
+ Grid-template-columns: repeat(3, 1fr);
+ Gap: 25px;
+ }
+ .property-card {
+ Background-color: white;
+ Border-radius: 10px;
+ Overflow: hidden;
+ Box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+ Transition: 0.3s;
+ }
+ .property-card:hover {
+ Transform: translateY(-5px);
+ }
+ .property-card img {
+ Width: 100%;
+ Height: 220px;
+ Object-fit: cover;
+ }
+ .property-info {
+ Padding: 20px;
+ }
+ .property-info h3 {
+ Margin-bottom: 10px;
+ }
+ .location {
+ Color: #777;
+ Margin-bottom: 10px;
+ }
+ .price {
+ Color: #00a8b5;
+ Font-size: 21px;
+ Font-weight: bold;
+ Margin-bottom: 15px;
+ }
+ .details {
+ Margin-bottom: 15px;
+ Color: #555;
+ }
+ .view-btn {
+ Display: inline-block;
+ Padding: 10px 18px;
+ Background-color: #222;
+ Color: white;
+ Text-decoration: none;
+ Border-radius: 5px;
+ }
+ .view-btn:hover {
+ Background-color: #00a8b5;
+ }
+ /* About */
+ .about {
+ Background-color: white;
+ Text-align: center;
+ }
+ .about p {
+ Max-width: 800px;
+ Margin: auto;
+ Line-height: 1.8;
+ }
+ /* Contact */
+ .contact {
+ Background-color: #eee;
+ }
+ .contact-form {
+ Max-width: 600px;
+ Margin: auto;
+ Background-color: white;
+ Padding: 30px;
+ Border-radius: 10px;
+ }
+ .contact-form input,
+ .contact-form textarea {
+ Width: 100%;
+ Padding: 13px;
+ Margin-bottom: 15px;
+ Border: 1px solid #ccc;
+ Outline: none;
+ }
+ .contact-form textarea {
+ Height: 130px;
+ Resize: none;
+ }
+ .contact-form button {
+ Width: 100%;
+ Padding: 13px;
+ Border: none;
+ Background-color: #00a8b5;
+ Color: white;
+ Font-size: 16px;
+ Cursor: pointer;
+ }
+ .contact-form button:hover {
+ Background-color: #00838f;
+ }
+ /* Footer */
+ Footer {
+ Background-color: #222;
+ Color: white;
+ Text-align: center;
+ Padding: 20px;
+ }
+ /* Responsive Design */
+ @media (max-width: 900px) {
+ Header {
+ Flex-direction: column;
+ Gap: 15px;
+ }
+ .property-container {
+ Grid-template-columns: repeat(2, 1fr);
+ }
+ .search-box {
+ Flex-direction: column;
+ }
+ }
+ @media (max-width: 600px) {
+ .hero h2 {
+ Font-size: 30px;
+ }
+ .property-container {
+ Grid-template-columns: 1fr;
+ }
+ Nav a {
+ Margin: 5px;
+ Font-size: 14px;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!—Header →
+ <header>
+ <h1>HomeFinder</h1>
+ <nav>
+ <a href=”#home”>Home</a>
+ <a href=”#properties”>Properties</a>
+ <a href=”#about”>About</a>
+ <a href=”#contact”>Contact</a>
+ </nav>
+ </header>
+ <!—Home Section →
+ <section class=”hero” id=”home”>
+ <div>
+ <h2>Find Your Dream Property</h2>
+ <p>
+ Search and discover the best homes,
+ Apartments and properties.
+ </p>
+ <div class=”search-box”>
+ <input
+ Type=”text”
+ Id=”searchInput”
+ Placeholder=”Enter location…”
+ >
+ <select id=”propertyType”>
+ <option value=”all”>All Properties</option>
+ <option value=”house”>House</option>
+ <option value=”apartment”>Apartment</option>
+ <option value=”villa”>Villa</option>
+ </select>
+ <button onclick=”searchProperty()”>
+ Search
+ </button>
+ </div>
+ </div>
+ </section>
+ <!—Properties Section →
+ <section id=”properties”>
+ <div class=”section-title”>
+ <h2>Featured Properties</h2>
+ <p>
+ Explore our latest property listings
+ </p>
+ </div>
+ <div class=”property-container” id=”propertyContainer”>
+ <!—Property 1 →
+ <div class=”property-card”
+ Data-location=”hyderabad”
+ Data-type=”house”>
+ <img
+ Src=https://images.unsplash.com/photo-1600585154340-be6161a56a0c
+ Alt=”House”
+ >
+ <div class=”property-info”>
+ <h3>Modern Family House</h3>
+ <p class=”location”>
+ Hyderabad, Telangana
+ </p>
+ <p class=”price”>
+ ₹75 Lakhs
+ </p>
+ <p class=”details”>
+ 3 Bedrooms | 2 Bathrooms | 1800 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ <!—Property 2 →
+ <div class=”property-card”
+ Data-location=”vijayawada”
+ Data-type=”apartment”>
+ <img
+ Src=https://images.unsplash.com/photo-1545324418-cc1a3fa10c00
+ Alt=”Apartment”
+ >
+ <div class=”property-info”>
+ <h3>Luxury Apartment</h3>
+ <p class=”location”>
+ Vijayawada, Andhra Pradesh
+ </p>
+ <p class=”price”>
+ ₹55 Lakhs
+ </p>
+ <p class=”details”>
+ 2 Bedrooms | 2 Bathrooms | 1200 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ <!—Property 3 →
+ <div class=”property-card”
+ Data-location=”rajahmundry”
+ Data-type=”villa”>
+ <img
+ Src=https://images.unsplash.com/photo-1600607687939-ce8a6c25118c
+ Alt=”Villa”
+ >
+ <div class=”property-info”>
+ <h3>Beautiful Luxury Villa</h3>
+ <p class=”location”>
+ Rajahmundry, Andhra Pradesh
+ </p>
+ <p class=”price”>
+ ₹1.2 Crore
+ </p>
+ <p class=”details”>
+ 4 Bedrooms | 3 Bathrooms | 2500 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ <!—Property 4 →
+ <div class=”property-card”
+ Data-location=”visakhapatnam”
+ Data-type=”house”>
+ <img
+ Src=https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde
+ Alt=”House”
+ >
+ <div class=”property-info”>
+ <h3>Elegant City House</h3>
+ <p class=”location”>
+ Visakhapatnam, Andhra Pradesh
+ </p>
+ <p class=”price”>
+ ₹85 Lakhs
+ </p>
+ <p class=”details”>
+ 3 Bedrooms | 3 Bathrooms | 2000 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ <!—Property 5 →
+ <div class=”property-card”
+ Data-location=”tirupati”
+ Data-type=”apartment”>
+ <img
+ Src=https://images.unsplash.com/photo-1493809842364-78817add7ffb
+ Alt=”Apartment”
+ >
+ <div class=”property-info”>
+ <h3>Premium Apartment</h3>
+ <p class=”location”>
+ Tirupati, Andhra Pradesh
+ </p>
+ <p class=”price”>
+ ₹48 Lakhs
+ </p>
+ <p class=”details”>
+ 2 Bedrooms | 2 Bathrooms | 1100 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ <!—Property 6 →
+ <div class=”property-card”
+ Data-location=”nellore”
+ Data-type=”villa”>
+ <img
+ Src=https://images.unsplash.com/photo-1613490493576-7fde63acd811
+ Alt=”Villa”
+ >
+ <div class=”property-info”>
+ <h3>Green View Villa</h3>
+ <p class=”location”>
+ Nellore, Andhra Pradesh
+ </p>
+ <p class=”price”>
+ ₹95 Lakhs
+ </p>
+ <p class=”details”>
+ 3 Bedrooms | 3 Bathrooms | 2200 sq.ft
+ </p>
+ <a href=”#contact” class=”view-btn”>
+ Contact Seller
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!—About Section →
+ <section class=”about” id=”about”>
+ <div class=”section-title”>
+ <h2>About HomeFinder</h2>
+ </div>
+ <p>
+ HomeFinder is an online real estate listing platform
+ Designed to help users find properties easily.
+ Buyers can browse available properties, search
+ According to location and property type, view
+ Property details and contact sellers or agents.
+ </p>
+ </section>
+ <!—Contact Section →
+ <section class=”contact” id=”contact”>
+ <div class=”section-title”>
+ <h2>Contact Seller / Agent</h2>
+ <p>
+ Send your enquiry about the property.
+ </p>
+ </div>
+ <form class=”contact-form” onsubmit=”sendMessage(event)”>
+ <input
+ Type=”text”
+ Id=”name”
+ Placeholder=”Your Name”
+ Required
+ >
+ <input
+ Type=”email”
+ Id=”email”
+ Placeholder=”Your Email”
+ Required
+ >
+ <input
+ Type=”tel”
+ Id=”phone”
+ Placeholder=”Phone Number”
+ Required
+ >
+ <textarea
+ Id=”message”
+ Placeholder=”Enter your message”
+ Required
+ ></textarea>
+ <button type=”submit”>
+ Send Enquiry
+ </button>
+ </form>
+ </section>
+ <!—Footer →
+ <footer>
+ <p>
+ © 2026 HomeFinder | Real Estate Listing Platform
+ </p>
+ </footer>
+ <!—JavaScript →
+ <script>
+ Function searchProperty() {
+ Let search =
+ Document.getElementById(“searchInput”)
+ .value
+ .toLowerCase()
+ .trim();
+ Let type =
+ Document.getElementById(“propertyType”)
+ .value;
+ Let properties =
+ Document.querySelectorAll(“.property-card”);
+ Let found = false;
+ Properties.forEach(function(property) {
+ Let location =
+ Property.dataset.location;
+ Let propertyType =
+ Property.dataset.type;
+ Let locationMatch =
+ Search === “” ||
+ Location.includes(search);
+ Let typeMatch =
+ Type === “all” ||
+ propertyType === type;
+ if (locationMatch && typeMatch) {
+ property.style.display = “block”;
+ found = true;
+ } else {
+ Property.style.display = “none”;
+ }
+ });
+ If (!found) {
+ Alert(“No properties found.”);
+ }
+ }
+ Function sendMessage(event) {
+ Event.preventDefault();
+ Let name =
+ Document.getElementById(“name”).value;
+ Alert(
+ “Thank you “ + name +
+ “! Your enquiry has been submitted.”
+ );
+ Document.querySelector(“.contact-form”).reset();
+ }
+ </script>
+</body>
+</html>
+16. GITHUB REPOSITORY
+The complete project can be uploaded to a GitHub repository. The repository contains the source code and project
+files in an organized manner. The GitHub link can be included in the presentation or project report so that others
+can view the project.

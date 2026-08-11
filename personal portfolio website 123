@@ -1,0 +1,235 @@
+ PERSONAL PORTFOLIO WEBSITE
+ PROJECT REPORT -1
+NAME:LOKKU SIREESHA
+COLLEGE: NBKR Institute Of Science and Technology
+COURSE:B.TECH -CSE
+YEAR:2024-2028
+1. PROJECT INTRODUCTION
+The Personal Portfolio Website is a web-based project developed to showcase my personal information,
+education, technical skills, projects, achievements, and contact details. The main goal is to create a simple,
+attractive, and professional online profile.
+2. PROBLEM DESCRIPTION
+It can be difficult to present personal skills, projects, and achievements in one place. This project solves the
+problem by providing a single website where all important professional information can be easily viewed.
+3. REQUIREMENTS
+The website requires a computer or laptop, a code editor such as Visual Studio Code, and a modern web browser.
+The main website requirements include Home, About, Skills, Education, Projects, and Contact sections.
+4. TECHNOLOGIES USED
+The website is developed using **HTML, CSS, and JavaScript**. HTML creates the structure, CSS provides
+styling and layout, and JavaScript adds interactive functionality.
+5. ARCHITECTURE
+The website follows a simple front-end structure. The main flow is:
+**Header → Home → About → Education → Skills → Projects → Contact → Footer**
+Users can navigate between different sections using the navigation menu.
+6. DATABASE DESIGN
+This portfolio is mainly a static website, so a database is not required. Personal information and project details
+are stored directly in the website files. A database can be added in the future for storing contact form submissions.
+7. UI/UX DESIGN
+The website uses a simple and user-friendly design. Proper spacing, readable fonts, images, navigation links,
+buttons, and responsive layouts are used to provide a better user experience.
+8. DEVELOPMENT PROCESS
+First, the website structure was planned. Then HTML was used to create the content, CSS was used for styling,
+and JavaScript was used for interactive features. Finally, the website was tested and improved.
+9. FEATURES
+The main features include:
+* Home section
+* About Me
+* Education
+* Technical Skills
+* Projects
+* Achievements
+* Contact section
+* Navigation menu
+* Images
+* Responsive design
+10. TESTING
+The website was tested for navigation, layout, images, buttons, links, and responsiveness. It was also checked on
+different screen sizes and web browsers to identify and fix errors.
+11. CHALLENGES FACED
+During development, some challenges were faced with image positioning, navigation spacing, text alignment,
+background images, responsive layout, and CSS styling.
+12. SOLUTIONS
+The problems were solved by using CSS properties such as **Flexbox, margin, padding, gap, position, and media
+queries**. Regular testing and debugging were also performed to improve the website.
+13. FUTURE ENHANCEMENTS
+In the future, the website can be improved by adding a **dark mode, animations, backend contact form, database,
+blog section, resume download, social media links, and additional projects**.
+14. CONCLUSION
+The Personal Portfolio Website helped me gain practical knowledge of HTML, CSS, and JavaScript. It also
+improved my understanding of web design, responsive layouts, UI/UX, debugging, and website development.
+15. SOURCES CODE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bharathi</title>
+</head>
+<style>
+*{
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+}
+ header{
+ display: flex;
+ padding:20px;
+ border:2px solid lightyellow;
+ justify-content: space-between;
+ align-items:center;
+ background-color: #333;
+ margin-left:0px;
+ margin-right: 30px;
+ }
+ nav{
+ display:flex;
+
+ align-items:center;
+ padding: 0px;
+
+ }
+ nav h1{
+ color: white;
+ margin:0px;
+ margin-right:auto;
+ padding-right: 10px;
+
+}
+ nav p{
+ color: white;
+ margin: 0px;
+ padding-right: 10px
+
+ }
+ nav a{
+ text-decoration: none;
+ color:white;
+ font-size:70%;
+ padding-left: 50px;
+ margin-left: 30px;
+ }
+ body{
+ margin:0;
+ background-image:url("https://encryptedtbn0.gstatic.com/images?q=tbn:ANd9GcTLXjWFcS2bF8s8eNq4NwF43JfPE4flw87fYNnvs_glzw&s=10");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position:right;
+ height:1400px;
+ width:1400px;
+
+ }
+ .hero{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height:50vh;
+ padding: 0px 20px;
+ }
+ content{
+ color:white;
+ }
+ image img{
+ height: 30px;
+ width:50px;
+ border-radius:25%;
+ }
+ button{
+ color: white;
+ background:blue;
+ transform:scale(1.17);
+ font-size:80%;
+ /* border-radius: 20%;*/
+ padding:8px;
+ margin-left:15%;
+ }
+ h2{
+ color: white;
+ text-align: right;
+ }
+ /* h4{
+ text-align--right-bottom:left ;
+
+ }*/
+ .hero{
+ display: flex;
+ justify-content: space-between;
+ align-items: center; /* Centers both sections vertically */
+ padding: 50px;
+}
+.left{
+ width: 40%;
+ color: white;
+}
+.right{
+ width: 50%;
+ color: white;
+}
+.right h2{
+ background-color: blue;
+ display: inline-block;
+ padding: 8px 15px;
+}
+.right p{
+ margin-top: 15px;
+ line-height: 1.6;
+}
+ </style>
+<body>
+<header>
+<nav>
+<div class="logo">
+<h1>Online Portfolio</h1>
+<p>Just another my Blog site</p>
+
+ </div>
+ <div class="menu">
+<a href="#home">HOME</a>
+<a href="#about">ABOUT ME</a>
+<a href="#education">EDUCATION</a>
+<a href="#skills">SKILLS</a>
+<a href="#services">SERVICES</a>
+<a href="#experience">EXPERIENCE</a>
+<a href="#works">WORKS</a>
+<a href="#contact">CONTACT US</a>
+ </div>
+ </nav>
+</header>
+ <section class="hero">
+ <div class="left">
+ <h1>LOKKU BHARATHI</h1>
+ <p> hi I am currently studying B.Tech in Computer Science Engineering.<br>
+ I am learning Web Development using HTML, CSS, and JavaScript.</p>
+ <br>
+ <button class="button">Hire Me</button>
+ </div>
+ </section>
+ <div class="right">
+ <h2>ABOUT ME</h2>
+ `
+ <h4>I am passionate about learning new
+ technologies and improving my programming
+ skills.Currently, I am learning HTML, CSS,
+ JavaScript, and web development to build
+ responsive and user-friendly website</h4>
+ <br>
+ <h4>I enjoy solving programming problems, creating
+ personal projects, and exploring new software
+ technologies. to be a i am become a skilled
+ Full Stack Web Developer and build innovative
+ web applications that solve real-world problems.
+ I believe in continuous learning, teamwork,
+ and creativity. I am always eager to take on
+ new challenges and improve my technical and
+ communication skills.Apart from coding, I
+ enjoy exploring new technologies, learning
+ about software development, and working on
+ creative ideas. I believe that every project
+ is an opportunity to improve my skills and
+ gain valuable experience.
+ </h4>
+ </div>
+</body>
+</html>
+16. ACHIEVEMENTS & CERTIFICATIONS
+➢ “This section highlights my achievements, certifications, workshops, and technical training. It shows my
+skills, learning progress, and interest in web development and programming.
